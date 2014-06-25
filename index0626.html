@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<Script Type="text/javascript" 
+src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></Script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<script type="text/javascript" src="http://www.pureexample.com/js/lib/jquery.ui.touch-punch.min.js"></script>
+
+
+
+<title>Ashley's Project</title>
+<style type="text/css">
+	body {		
+		padding-left: 4em;
+		font-family: Georgia, "Times New Roman",
+		Times, serif;
+		color: purple;
+		background-color: #C0C0C0 }
+	ul, li {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	.menu {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		position: absolute;
+		top: 1em;
+		left: 1em;
+		width: 2em;
+		background-color: #C0C0C0}
+	.content1
+		{
+	position:absolute;
+	left:4em;
+	top:1em
+		}
+	.content2
+		{
+		position:absolute;
+		left:5em;
+		top:3.5em
+		}
+	
+	.content3
+		{
+		position:absolute;
+		left:7em;
+		top:8em
+		}
+	
+	.content4
+		{
+	position:absolute;
+	left:8em;
+	top:3.5em;
+	width: 383px;
+		}
+		
+	.button {
+		-moz-box-shadow:inset 0px 1px 0px 0px #f29c93;
+		-webkit-box-shadow:inset 0px 1px 0px 0px #f29c93;
+		box-shadow:inset 0px 1px 0px 0px #f29c93;
+		background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #3d3332), color-stop(1, #ce0100) );
+		background:-moz-linear-gradient( center top, #3d3332 5%, #ce0100 100% );
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d3332', endColorstr='#ce0100');
+		background-color:#3d3332;
+		-webkit-border-top-left-radius:7px;
+		-moz-border-radius-topleft:7px;
+		border-top-left-radius:7px;
+		-webkit-border-top-right-radius:7px;
+		-moz-border-radius-topright:7px;
+		border-top-right-radius:7px;
+		-webkit-border-bottom-right-radius:7px;
+		-moz-border-radius-bottomright:7px;
+		border-bottom-right-radius:7px;
+		-webkit-border-bottom-left-radius:7px;
+		-moz-border-radius-bottomleft:7px;
+		border-bottom-left-radius:7px;
+		text-indent:0px;
+		display:inline-block;
+		color:#ffffff;
+		font-family:Arial;
+		font-size:13px;
+		font-weight:bold;
+		font-style:normal;
+		height:21px;
+		line-height:21px;
+		width:54px;
+		text-decoration:none;
+		text-align:center;
+		text-shadow:1px 1px 0px #b23e35;
+		top:5em; 
+		left:5em; 
+	}	
+	#buttonposition{
+		position: absolute; 
+		top:4.5em; 
+		left:6.5em; 
+	}	
+	#title01{
+		position:absolute;
+		left:5em;
+		top:5em		
+	}
+	#accordion {
+	font-size: 12pt;
+	}
+</style>
+    
+<script type="text/javascript">
+	$(document).ready(function () {
+	    $('.button').click(function(){
+			alert("assignment2.jpg");
+		});	
+	});	
+
+	//Tab
+	$(function(){
+	var _showTab = 0;
+	var $defaultLi = $('ul.tabs li').eq(_showTab).addClass('active');
+	$($defaultLi.find('a').attr('href')).siblings().hide();
+	$('ul.tabs li').click(function() {
+		var $this = $(this),
+			_clickTab = $this.find('a').attr('href');
+		$this.addClass('active').siblings('.active');
+		$(_clickTab).stop(false, true).fadeIn().siblings().hide();
+
+		return false;
+		}).find('a').focus(function(){
+			this.blur();
+		});
+	});
+
+	//accordion
+	$(function () {
+		$("#accordion").accordion({
+			heightStyle: "content"
+		});
+	});
+
+</script>
+</head>
+
+<body>
+<!-- 目錄 -->
+<div>
+    <div class = menu>
+    	<ul class="tabs">
+          <li><a href="#tab1"><img src="images/01.png" border="0"></a>
+          <li><a href="#tab2"><img src="images/02.png" border="0"></a>
+          <li><a href="#tab3"><img src="images/03.png" border="0"></a>
+          <li><a href="#tab4"><img src="images/04.png" border="0"></a>
+          <li><a href="#tab5"><img src="images/05.png" border="0"></a>
+          <li><img src="images/bg1.png" border="0"></a>          
+    	</ul>
+    </div>
+
+<!-- 主要內容 -->
+
+<div class=content1><img src="images/bg2.png" border="0"></div>
+<div class=content2><img src="images/bg3.png" border="0"></div>
+<div class=content3><img src="images/bg4.png" border="0"></div>
+<div id=buttonposition class= button>Back</div>
+<div id=title01><img src="images/title01.png" border="0"></div>
+<div class=content4>        
+    <div id="tab1" class=content4>     
+        <div style="height:250px">
+            <div id="accordion">
+                <h3>accordion1</h3>
+                    <div>
+                        This is accordion1-1    <div class= button>Click</div><br>
+                        This is accordion1-2<br>
+                        This is accordion1-3
+                    </div>
+                <h3>accordion2</h3>
+                <div>
+                	This is accordion2-1<br>
+                    This is accordion2-2
+              </div>
+                <h3>accordion3 </h3>
+                <div>This is accordion3</div>
+            </div>
+        </div>        
+	</div>
+    
+    <div id="tab2" class=content4>
+    	<h2>tab2</h2>
+    	<p>tab2</p>
+	</div>
+    
+    <div id="tab3" class=content4>
+    	<h2>tab3</h2>
+    	<p>tab3</p>
+	</div>
+    
+    <div id="tab4" class=content4>
+    	<h2>tab4</h2>
+    	<p>tab4</p>
+    </div>
+    
+    <div id="tab5" class=content4>
+    	<h2>tab5</h2>
+    	<p>tab5</p>
+    </div>
+
+</div>
+</div>
+</body>
+</html>
