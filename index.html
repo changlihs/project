@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ashley's Project</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script>
+  $(function() {
+    $( "#tabs" ).tabs().addClass( "ui-tabs-vertical ui-helper-clearfix" );
+    $( "#tabs li" ).removeClass( "ui-corner-top" ).addClass( "ui-corner-left" );
+  });
+  
+  $(function() {
+    $( "#accordion1" ).accordion();
+  });
+  
+  $(function() {
+    $( "#accordion2" ).accordion();
+  });
+  
+  $(function() {
+    $( "#accordion3" ).accordion();
+  });
+  </script>
+  <style>
+  .ui-tabs-vertical { width: 55em; }
+  .ui-tabs-vertical .ui-tabs-nav { padding: .2em .1em .2em .2em; float: left; width: 12em; }
+  .ui-tabs-vertical .ui-tabs-nav li { clear: left; width: 100%; border-bottom-width: 1px !important; border-right-width: 0 !important; margin: 0 -1px .2em 0; }
+  .ui-tabs-vertical .ui-tabs-nav li a { display:block; }
+  .ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active { padding-bottom: 0; padding-right: .1em; border-right-width: 1px; border-right-width: 1px; }
+  .ui-tabs-vertical .ui-tabs-panel { padding: 1em; float: right; width: 40em;}
+  
+  	body {		
+		padding-left: 4em;
+		font-family: Georgia, "Times New Roman",
+        Times, serif;
+    	color: purple;
+    	background-color: #C0C0C0 }
+	.tabs {
+	    list-style-type: none;
+    	padding: 0;
+    	margin: 0;
+    	position: absolute;
+    	top: 1em;
+    	left: 1em;
+    	width: 2em;
+		background-color: #C0C0C0}
+	.content1
+		{
+	position:absolute;
+	left:4em;
+	top:1em
+		}
+	.content2
+		{
+		position:absolute;
+		left:5em;
+		top:3.5em
+		}
+
+	.content3
+		{
+		position:absolute;
+		left:7em;
+		top:8em
+		}
+
+	.content4
+		{
+		position:absolute;
+		left:15em;
+		top:7em
+		}
+		
+	.button {
+		-moz-box-shadow:inset 0px 1px 0px 0px #f29c93;
+		-webkit-box-shadow:inset 0px 1px 0px 0px #f29c93;
+		box-shadow:inset 0px 1px 0px 0px #f29c93;
+		background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #3d3332), color-stop(1, #ce0100) );
+		background:-moz-linear-gradient( center top, #3d3332 5%, #ce0100 100% );
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d3332', endColorstr='#ce0100');
+		background-color:#3d3332;
+		-webkit-border-top-left-radius:7px;
+		-moz-border-radius-topleft:7px;
+		border-top-left-radius:7px;
+		-webkit-border-top-right-radius:7px;
+		-moz-border-radius-topright:7px;
+		border-top-right-radius:7px;
+		-webkit-border-bottom-right-radius:7px;
+		-moz-border-radius-bottomright:7px;
+		border-bottom-right-radius:7px;
+		-webkit-border-bottom-left-radius:7px;
+		-moz-border-radius-bottomleft:7px;
+		border-bottom-left-radius:7px;
+		text-indent:0px;
+		display:inline-block;
+		color:#ffffff;
+		font-family:Arial;
+		font-size:13px;
+		font-weight:bold;
+		font-style:normal;
+		height:21px;
+		line-height:21px;
+		width:54px;
+		text-decoration:none;
+		text-align:center;
+		text-shadow:1px 1px 0px #b23e35;
+		top:5em; 
+		left:5em; 
+	}
+	.button:hover {
+		background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ce0100), color-stop(1, #3d3332) );
+		background:-moz-linear-gradient( center top, #ce0100 5%, #3d3332 100% );
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ce0100', endColorstr='#3d3332');
+		background-color:#ce0100;
+	}
+	.button:active {
+		position:relative;
+		top:1px;
+	}
+	
+	#buttonposition{
+		position: absolute; 
+	    top:4.5em; 
+  		left:6.5em; 
+	}
+	
+	#title01{
+		position:absolute;
+		left:5em;
+		top:5em		
+	}
+  </style>
+</head>
+<body>
+ 
+<div id="tabs">
+  <ul>
+    <li><li1><a href="#tabs-1"><img src="images/01.png" border="0"></a></li>
+    <li><li2><a href="#tabs-2"><img src="images/02.png" border="0"></a></li>
+    <li><li3><a href="#tabs-3"><img src="images/03.png" border="0"></a></li>
+  </ul>
+  <div id="tabs-1">
+    <h2>Content heading 1</h2>
+    <p>
+        <div id="accordion1">
+          <h3>Section 1</h3>
+          <div>
+            <p>1</p>
+          </div>
+          <h3>Section 2</h3>
+          <div>
+            <p>2</p>
+          </div>
+          <h3>Section 3</h3>
+          <div>
+            <p>3</p>
+            <ul>
+              <li>List item one</li>
+              <li>List item two</li>
+              <li>List item three</li>
+            </ul>
+          </div>
+          <h3>Section 4</h3>
+          <div>
+            <p>4</p>
+            <p>
+            Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+            inceptos himenaeos.
+            </p>
+          </div>
+        </div>    
+    </p>
+  </div>
+  <div id="tabs-2">
+    <h2>Content heading 2</h2>
+    <p>
+        <div id="accordion2">
+          <h3>Section 1</h3>
+          <div>
+            <p>1</p>
+          </div>
+          <h3>Section 2</h3>
+          <div>
+            <p>2</p>
+          </div>
+          <h3>Section 3</h3>
+          <div>
+            <p>3</p>
+            <ul>
+              <li>List item one</li>
+              <li>List item two</li>
+              <li>List item three</li>
+            </ul>
+          </div>
+          <h3>Section 4</h3>
+          <div>
+            <p>4</p>
+            <p>
+            Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+            inceptos himenaeos.
+            </p>
+          </div>
+        </div>       
+    </p>
+  </div>
+  <div id="tabs-3">
+    <h2>Content heading 3</h2>
+    <p>
+        <div id="accordion3">
+          <h3>Section 1</h3>
+          <div>
+            <p>1</p>
+          </div>
+          <h3>Section 2</h3>
+          <div>
+            <p>2</p>
+          </div>
+          <h3>Section 3</h3>
+          <div>
+            <p>3</p>
+            <ul>
+              <li>List item one</li>
+              <li>List item two</li>
+              <li>List item three</li>
+            </ul>
+          </div>
+          <h3>Section 4</h3>
+          <div>
+            <p>4</p>
+            <p>
+            Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+            inceptos himenaeos.
+            </p>
+          </div>
+        </div>        
+    </p>
+  </div>
+</div>
+ 
+ 
+</body>
+</html>
